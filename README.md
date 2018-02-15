@@ -31,15 +31,15 @@ The resulting data frame has 180 obs. of  89 variables, including a column "Subj
 
 These data therefore satisfy the principle criteria for tidy data as discussed in the following articles:
 Hadley Wickham.Tidy data.The Journal of Statistical Software, vol. 59, 2014.
-http://www.stat.wvu.edu/~jharner/courses/stat623/docs/tidy-dataJSS.pdf
-David Hood
-https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/
+http://www.stat.wvu.edu/~jharner/courses/stat623/docs/tidy-dataJSS.pdf , and
+
+David Hood at https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/
 
 They data can be viewed using this code:
 ```{r}
-address <- "###"
+address <- "https://s3.amazonaws.com/coursera-uploads/peer-review/1986a50deb21eccfa7f17a5d6a2c66ed/datafile.txt"
 address <- sub("^https", "http", address)
-data <- read.table(url(address), header = TRUE) 
+data <- read.table(url(address), sep = " ", header = TRUE) 
 View(data)
 ```
 
