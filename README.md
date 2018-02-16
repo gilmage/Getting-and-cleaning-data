@@ -37,7 +37,7 @@ David Hood at https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-clean
 
 They data can be viewed using this code:
 ```{r}
-address <- "https://s3.amazonaws.com/coursera-uploads/peer-review/1986a50deb21eccfa7f17a5d6a2c66ed/datafile.txt"
+address <- "https://raw.githubusercontent.com/gilmage/Getting-and-cleaning-data/master/datafile.txt"
 address <- sub("^https", "http", address)
 data <- read.table(url(address), sep = " ", header = TRUE) 
 View(data)
